@@ -111,6 +111,7 @@ $(KERNEL_BIN): $(KERNEL_CONFIG)
 	$(hide) echo "Building kernel..."
 	$(MAKE) -C $(TARGET_KERNEL_SOURCE) ARCH=$(KERNEL_ARCH) CROSS_COMPILE=$(KERNEL_CROSS_COMPILE) -j$(N_KERNEL_BUILD_THREAD)
 
+# mkdtimg cfg_create exynos7885_dtbo.img arch/arm64/boot/dts/exynos/exynos7885_dtboimg.cfg
 $(INSTALLED_KERNEL_TARGET): $(KERNEL_BIN) $(MKDTIMG)
 	cp $(KERNEL_BIN) $(INSTALLED_KERNEL_TARGET)
 	cp $(KERNEL_DTB) $(INSTALLED_DTB_TARGET)

@@ -58,7 +58,7 @@ config DECON_HIBER
         default n
 
 config EXYNOS_SUPPORT_DOZE
-	bool "Support Doze mode to aod service"
+	bool "Suppot Doze mode to aod service"
 	depends on EXYNOS_DECON_7885
 	default n
 

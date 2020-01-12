@@ -10,7 +10,7 @@
 */
 
 &mali {
-	interactive_info = <676000 95 0>;
+	interactive_info = <676000 75 0>;
 	gpu_dvfs_table_size = <9 7>; /*<row col>*/
 	                /* clk     min max  down mif_min  lit_min big_max */
 	gpu_dvfs_table = < 1300000 98  100  1    1794000  1586000 0

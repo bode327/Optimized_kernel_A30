@@ -826,7 +826,6 @@
 				domain@0 {
 					device_type = "cpufreq-userctrl";
 					shared-cpus = "0-5";
-					min-freq = <208000>;
 
 					user-default-qos = <449000>;
 				};
@@ -834,7 +833,6 @@
 				domain@1 {
 					device_type = "cpufreq-userctrl";
 					shared-cpus = "6-7";
-					min-freq = <312000>;
 
 					user-default-qos = <936000>;
 
@@ -842,11 +840,7 @@
 						ctrl-type = <PM_QOS_MIN_LIMIT>;
 						execution-mode = <AARCH64_MODE>;
 							/* big	    lit */
-						table = < 2184000 1586000
-					  		  2080000  449000
-					 	  	  1976000  449000
-							  1872000  449000
-							  1768000  449000
+						table = < 1768000  1586000
 							  1664000  449000
 							  1560000  449000
 							  1352000  449000
@@ -859,12 +853,7 @@
 						ctrl-type = <PM_QOS_MAX_LIMIT>;
 						execution-mode = <AARCH64_MODE>;
 							/* big	    lit */
-						table = < 2184000 1690000
-							  2184000 1586000
-							  2080000 1586000
-							  1976000 1586000
-							  1872000 1586000
-							  1768000 1586000
+						table = < 1768000 1586000
 							  1664000 1586000
 							  1560000 1586000
 							  1352000 1586000

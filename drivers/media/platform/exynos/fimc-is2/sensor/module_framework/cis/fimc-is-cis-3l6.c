@@ -398,6 +398,7 @@ static bool sensor_3l6_is_padf_enable(u32 mode)
 	{
 		case SENSOR_3L6_MODE_1280x720_120FPS:
 		case SENSOR_3L6_MODE_1028x772_120FPS:
+		case SENSOR_3L6_MODE_1024x768_120FPS:
 			return false;
 		default:
 			return true;
@@ -451,13 +452,20 @@ int sensor_3l6_cis_mode_change(struct v4l2_subdev *subdev, u32 mode)
 	}
 	else {
 		dbg_sensor(1, "USE_MS_PDAF: [%s] NOT using pdaf\n", __func__);
-		if (mode == SENSOR_3L6_MODE_1028x772_120FPS) {
-			cis->cis_data->cur_pos_x = (sensor_3l6_setfiles[mode][CURR_X_INDEX_3L6] - CALIBRATE_CUR_X_3L6) >> 2;
-			cis->cis_data->cur_pos_y = (sensor_3l6_setfiles[mode][CURR_Y_INDEX_3L6] - CALIBRATE_CUR_Y_3L6) >> 2;
-		}
-		else if (mode == SENSOR_3L6_MODE_1280x720_120FPS) {
-			cis->cis_data->cur_pos_x = (sensor_3l6_setfiles[mode][CURR_X_INDEX_3L6] - CALIBRATE_CUR_X_3L6) >> 1;
-			cis->cis_data->cur_pos_y = (sensor_3l6_setfiles[mode][CURR_Y_INDEX_3L6] - CALIBRATE_CUR_Y_3L6) >> 1;
+		switch (mode)
+		{
+			case SENSOR_3L6_MODE_1028x772_120FPS:
+			case SENSOR_3L6_MODE_1024x768_120FPS:
+				cis->cis_data->cur_pos_x = (sensor_3l6_setfiles[mode][CURR_X_INDEX_3L6] - CALIBRATE_CUR_X_3L6) >> 2;
+				cis->cis_data->cur_pos_y = (sensor_3l6_setfiles[mode][CURR_Y_INDEX_3L6] - CALIBRATE_CUR_Y_3L6) >> 2;
+				break;
+			case SENSOR_3L6_MODE_1280x720_120FPS:
+				cis->cis_data->cur_pos_x = (sensor_3l6_setfiles[mode][CURR_X_INDEX_3L6] - CALIBRATE_CUR_X_3L6) >> 1;
+				cis->cis_data->cur_pos_y = (sensor_3l6_setfiles[mode][CURR_Y_INDEX_3L6] - CALIBRATE_CUR_Y_3L6) >> 1;
+				break;
+			default:
+				cis->cis_data->cur_pos_x = 0;
+				cis->cis_data->cur_pos_y = 0;
 		}
 	}
 	dbg_sensor(1, "USE_MS_PDAF: [%s] cur_pos_x [%d] cur_pos_y [%d] \n", __func__, cis->cis_data->cur_pos_x, cis->cis_data->cur_pos_y);

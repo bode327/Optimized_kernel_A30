@@ -64,7 +64,7 @@ static spinlock_t speedchange_cpumask_lock;
 static struct mutex gov_lock;
 
 /* Hi speed to bump to from lo speed when load burst (default max) */
-static unsigned int hispeed_freq = 1497600;
+static unsigned int hispeed_freq = 1690000;
 
 /* Go to hi speed when CPU load at or above this value. */
 #define DEFAULT_GO_HISPEED_LOAD 90
@@ -81,7 +81,7 @@ static int ntarget_loads = ARRAY_SIZE(default_target_loads);
  * Frequency calculation threshold.  Avoid freq oscillations up to this
  * threshold and allow for dynamic changes above (default 1497600MHz).
  */
-static unsigned long freq_calc_thresh = 1497600;
+static unsigned long freq_calc_thresh = 1690000;
 
 /*
  * The minimum amount of time to spend at a frequency before we can ramp down.

@@ -26,10 +26,6 @@ obj-$(CONFIG_EXYNOS_BCM)	+= exynos-bcm.o
 obj-$(CONFIG_EXYNOS_WD_DVFS)		+= pmu_count.o
 
 obj-$(CONFIG_EXYNOS_HOTPLUG_GOVERNOR)	+= exynos-hotplug_governor.o
-obj-$(CONFIG_AIO_HOTPLUG)		+= aio_hotplug.o
-obj-$(CONFIG_ALUCARD_HOTPLUG)		+= alucard_hotplug.o
-obj-$(CONFIG_ASMP_HOTPLUG)		+= autosmp.o
-obj-$(CONFIG_BLU_PLUG)			+= blu_plug.o
 obj-$(CONFIG_ARM64_EXYNOS_CPUIDLE)	+= cpuidle_profiler.o
 
 # USI

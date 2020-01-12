@@ -73,14 +73,6 @@ enum exynos_devfreq_lv_index {
 	DEV_LV18,
 	DEV_LV19,
 	DEV_LV20,
-	DEV_LV21,
-	DEV_LV22,
-	DEV_LV23,
-	DEV_LV24,
-	DEV_LV25,
-	DEV_LV26,
-	DEV_LV27,
-	DEV_LV28,
 	DEV_LV_END,
 };
 

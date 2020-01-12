@@ -56,6 +56,10 @@ config MALI_TMIX_R10P0
 config MALI_TMIX_R16P0
 	depends on MALI_TMIX
 	bool "mimir r16p0 driver"
+
+config MALI_TMIX_R19P0
+	depends on MALI_TMIX
+	bool "mimir r19p0 driver"
 endchoice
 
 if MALI_TMIX_R3P0
@@ -76,4 +80,8 @@ endif
 
 if MALI_TMIX_R16P0
 source "drivers/gpu/arm/tMIx/b_r16p0/Kconfig"
+endif
+
+if MALI_TMIX_R19P0
+source "drivers/gpu/arm/tMIx/b_r19p0/Kconfig"
 endif

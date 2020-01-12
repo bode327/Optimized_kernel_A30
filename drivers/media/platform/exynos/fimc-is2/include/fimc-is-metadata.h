@@ -811,6 +811,7 @@ enum aa_scene_mode {
 	AA_SCENE_MODE_STICKER,
 	AA_SCENE_MODE_INSTAGRAM,
 	AA_SCENE_MODE_FAST_AE,
+	AA_SCENE_MODE_ILLUMINANCE,
 };
 
 enum aa_effect_mode {
@@ -984,6 +985,8 @@ enum awb_state {
 enum aa_videostabilization_mode {
 	VIDEO_STABILIZATION_MODE_OFF = 0,
 	VIDEO_STABILIZATION_MODE_ON,
+	VIDEO_STABILIZATION_MODE_SWVDIS = 100,
+	VIDEO_STABILIZATION_MODE_SUPERSTEADY,
 };
 
 enum aa_isomode {

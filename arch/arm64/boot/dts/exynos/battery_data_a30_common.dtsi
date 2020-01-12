@@ -507,7 +507,7 @@
  *  34	CABLE_MAX,
  */
 			cable-info {
-				default_input_current = <1050>;
+				default_input_current = <1800>;
 				default_charging_current = <2100>;
 				full_check_current_1st = <400>;
 				full_check_current_2nd = <200>;
@@ -526,7 +526,7 @@
 
 				current_group_3 {
 					cable_number = <5 32>;
-					input_current = <1050>;
+					input_current = <1500>;
 					charging_current = <1500>;
 				};
 
@@ -562,7 +562,7 @@
 
 				current_group_9 {
 					cable_number = <26>;
-					input_current = <1050>;
+					input_current = <2000>;
 					charging_current = <1800>;
 				};
 
@@ -623,7 +623,7 @@
 		fuelgauge,fuel_alert_vol = <3300>;
 		fuelgauge,low_temp_limit = <100>;
 		fuelgauge,sw_vbat_l_recovery_vol = <3465>;
-		fuelgauge,capacity_max = <970>;
+		fuelgauge,capacity_max = <1000>;
 		fuelgauge,capacity_max_margin = <200>;
 		fuelgauge,capacity_min = <0>;
 		fuelgauge,capacity_calculation_type = <28>;

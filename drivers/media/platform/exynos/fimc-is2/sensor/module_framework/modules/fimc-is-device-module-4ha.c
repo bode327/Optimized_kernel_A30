@@ -79,7 +79,7 @@ static struct fimc_is_sensor_cfg config_module_4ha_4lane[] = {
 	/* 2448x2448_30fps */
 	FIMC_IS_SENSOR_CFG(2448, 2448, 30, 14, 10, CSI_DATA_LANES_4),
 	/* 1968x1968_30fps */
-	FIMC_IS_SENSOR_CFG(1968, 1968, 30, 14, 11, CSI_DATA_LANES_4),       
+	FIMC_IS_SENSOR_CFG(1968, 1968, 30, 14, 11, CSI_DATA_LANES_4),
 	/* 1920x1080@30fps */
 	FIMC_IS_SENSOR_CFG(1920, 1080, 30, 14, 12, CSI_DATA_LANES_4),
 	/* 1632x1224_30fps */

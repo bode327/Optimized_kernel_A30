@@ -1921,10 +1921,10 @@ static inline void cpufreq_trigger_update(u64 time) {}
 
 #ifdef arch_scale_freq_capacity
 #ifndef arch_scale_freq_invariant
-#define arch_scale_freq_invariant()	(true)
+#define arch_scale_freq_invariant()  (true)
 #endif
 #else /* arch_scale_freq_capacity */
-#define arch_scale_freq_invariant()	(false)
+#define arch_scale_freq_invariant()  (false)
 #endif
 
 static inline void account_reset_rq(struct rq *rq)

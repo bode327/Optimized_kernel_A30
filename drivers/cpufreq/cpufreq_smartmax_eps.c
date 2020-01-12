@@ -82,7 +82,7 @@ extern int tegra_input_boost (struct cpufreq_policy *policy,
 
 // msm8974 platform
 #ifdef CONFIG_CPU_FREQ_GOV_SMARTMAX_EPS
-#define DEFAULT_SUSPEND_IDEAL_FREQ 300000
+#define DEFAULT_SUSPEND_IDEAL_FREQ 343000
 #define DEFAULT_AWAKE_IDEAL_FREQ 652800
 #define DEFAULT_RAMP_UP_STEP 200000
 #define DEFAULT_RAMP_DOWN_STEP 200000
@@ -281,7 +281,7 @@ static bool is_suspended = false;
 static unsigned int min_sampling_rate;
 
 #define LATENCY_MULTIPLIER			(1000)
-#define MIN_LATENCY_MULTIPLIER			(100)
+//#define MIN_LATENCY_MULTIPLIER			(100)
 #define TRANSITION_LATENCY_LIMIT		(10 * 1000 * 1000)
 
 /*

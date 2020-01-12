@@ -340,7 +340,7 @@ int sensor_2x5_cis_create_burst_cal(u32 *burst_buf)
 
 #ifdef DEBUG_BURSTBUF_MEM
 	info("%s: Last index %d, Addr 0x%p\n", __func__, burst_index, end_addr);
-	if (index != (burst_index * 3) || burst_index != SENSOR_2X5_BURST_CAL_NR_RAW 
+	if (index != (burst_index * 3) || burst_index != SENSOR_2X5_BURST_CAL_NR_RAW
 	  || &burst_cal_buf[BURST_BUF_SIZE] != end_addr) {
 		err("check Burst Cal. Buf-Sz=%d, index=%d, burst_index=%d end addr 0x%p, 0x%p",
 			BURST_BUF_SIZE, index, burst_index, &burst_cal_buf[BURST_BUF_SIZE], end_addr);

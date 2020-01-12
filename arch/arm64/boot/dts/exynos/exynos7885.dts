@@ -298,7 +298,7 @@
 			cal-id = <ACPM_DVFS_CPUCL1>;
 			dm-type = <DM_CPU_CL0>;
 
-			min-freq = <208000>;
+			min-freq = <449000>;
 
 			/* PM QoS Class ID*/
 			pm_qos-min-class = <3>;
@@ -317,8 +317,7 @@
 					const-type = <CONSTRAINT_MIN>;
 					dm-type = <DM_MIF>;
 						/*  cpu     mif  */
-                                        table = < 1794000 1014000
-						  1690000 1014000
+                                        table = < 1690000 1014000
 						  1586000 1014000
 						  1482000 1014000
 						  1352000  845000
@@ -342,7 +341,7 @@
 			cal-id = <ACPM_DVFS_CPUCL0>;
 			dm-type = <DM_CPU_CL1>;
 
-			min-freq = <312000>;
+			min-freq = <936000>;
 
 			/* PM QoS Class ID*/
 			pm_qos-min-class = <5>;
@@ -359,8 +358,7 @@
 					const-type = <CONSTRAINT_MIN>;
 					dm-type = <DM_MIF>;
 						/*  cpu     mif  */
-                                        table = < 2288000 1794000
-						  2184000 1794000
+                                        table = < 2184000 1794000
                                                   2080000 1794000
                                                   1976000 1539000
                                                   1872000 1539000
@@ -370,9 +368,7 @@
                                                   1352000  845000
                                                   1144000  676000
                                                    936000  546000
-                                                   728000  420000
-          					   520000  420000
-          					   312000  420000>;
+                                                   728000  420000>;
                                 };
 			};
 		};
@@ -425,7 +421,7 @@
 		use_delay_time = "true";
 		delay_time_list = "20";
 
-		freq_info = <1794000 676000 208000 208000 1794000 676000>;
+		freq_info = <1794000 676000 420000 420000 1794000 676000>;
 		/* initial_freq, default_qos, suspend_freq, min_freq, max_freq reboot_freq */
 
 		/* Booting value */
@@ -2665,8 +2661,7 @@
 				ctrl-type = <PM_QOS_MAX_LIMIT>;
 				execution-mode = <AARCH64_MODE>;
 					/* big	    lit */
-				table = < 2184000 1690000
-					  2184000 1586000
+				table = < 2184000 1586000
 					  2080000 1586000
 					  1976000 1586000
 					  1872000 1586000
